@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfecto Group | התקנת עמדות טעינה לרכב חשמלי</title>
+  <meta name="description" content="Perfecto Group — התקנת עמדות טעינה לרכב חשמלי, חפירות ותשתיות, הרמת אבנים משתלבות, עבודות תקשורת והדברה.">
+
+  <!-- Шрифты: Heebo — идеально для иврита -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="he.css">
+</head>
+<body>
+
+  <!-- ======================= НАВБАР ======================= -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+
+      <!-- Логотип + название -->
+      <a href="#" class="navbar__brand">
+        <img src="img/logo.png" alt="Perfecto Group" class="navbar__logo-img">
+        <span class="navbar__name">Perfecto <b>Group</b></span>
+      </a>
+
+      <!-- Меню -->
+      <nav class="navbar__menu" id="navMenu">
+        <a href="#works" class="navbar__link">העבודות שלנו</a>
+        <a href="#services" class="navbar__link">השירותים שלנו</a>
+        <a href="#contact" class="navbar__link">צור קשר</a>
+      </nav>
+
+      <!-- Выбор языка -->
+      <div class="lang-switcher">
+        <button class="lang-switcher__btn" id="langBurger" aria-label="Выбор языка" type="button" aria-expanded="false">
+          <div class="lang-switcher__current">
+            <img src="img/he.png" alt="Hebrew" class="lang-switcher__flag">
+            <span class="lang-switcher__code">HE</span>
+          </div>
+          <span class="lang-switcher__arrow">▼</span>
+        </button>
+        
+        <div class="lang-switcher__menu" id="langMenu">
+          <button class="lang-switcher__item" data-lang="he" type="button">
+            <img src="img/he.png" alt="Hebrew" class="lang-switcher__flag">
+            <span>עברית</span>
+          </button>
+          <button class="lang-switcher__item" data-lang="ru" type="button">
+            <img src="img/rus.png" alt="Russian" class="lang-switcher__flag">
+            <span>Русский</span>
+          </button>
+          <button class="lang-switcher__item" data-lang="en" type="button">
+            <img src="img/eng.png" alt="English" class="lang-switcher__flag">
+            <span>English</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Бургер для мобильных -->
+      <button class="navbar__burger" id="navBurger" aria-label="פתח תפריט">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Мобильное меню -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#works" class="mobile-menu__link">העבודות שלנו</a>
+    <a href="#services" class="mobile-menu__link">השירותים שלנו</a>
+    <a href="#contact" class="mobile-menu__link">צור קשר</a>
+    <a href="https://api.whatsapp.com/send?phone=972534922222" target="_blank" class="btn mobile-menu__btn">שלח וואטסאפ</a>
+  </div>
+
+  <main>
+
+    <!-- ======================= HERO ======================= -->
+    <section class="hero">
+      <!-- Декоративные пятна (анимируются в animations.js) -->
+      <div class="hero__blob hero__blob--1" data-parallax="0.04"></div>
+      <div class="hero__blob hero__blob--2" data-parallax="-0.03"></div>
+
+      <div class="container hero__grid">
+
+        <!-- Текст -->
+        <div class="hero__content">
+          <div class="hero__badge reveal">
+            <span class="dot"></span> פתרונות מקצועיים לרכב חשמלי
+          </div>
+
+          <h1 class="hero__title reveal" data-delay="100">
+            התקנת עמדות טעינה<br>
+            <span class="accent-text">לרכב חשמלי</span>
+          </h1>
+
+          <p class="hero__subtitle reveal" data-delay="200">
+            עבודה איכותית, שירות אמין והמחיר הטוב ביותר.
+            ליווי מלא מהסקירה ועד החיבור — לעסקים וללקוחות פרטיים.
+          </p>
+
+          <div class="hero__actions reveal" data-delay="300">
+            <a href="#contact" class="btn btn--primary">
+              קבלו הצעת מחיר
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M19 12H5m0 0l6 6m-6-6l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="#services" class="btn btn--ghost">לכל השירותים</a>
+          </div>
+
+          <!-- Мини-статистика -->
+          <div class="hero__stats reveal" data-delay="400">
+            <div class="stat">
+              <span class="stat__num"><span class="counter" data-target="500">0</span>+</span>
+              <span class="stat__label">התקנות בוצעו</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num"><span class="counter" data-target="100">0</span>%</span>
+              <span class="stat__label">שביעות רצון</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num"><span class="counter" data-target="10">0</span>+</span>
+              <span class="stat__label">שנות ניסיון</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Главное фото -->
+        <div class="hero__media reveal" data-delay="200">
+          <div class="img-placeholder img-placeholder--hero">
+            <img src="img/hero.jpg" alt="עמדת טעינה לרכב חשמלי">
+          </div>
+
+          <!-- Плавающие карточки -->
+          <div class="float-card float-card--1" data-parallax="0.02">
+            <div class="float-card__icon">✓</div>
+            <div>
+              <b>אחריות מלאה</b>
+              <small>על כל עבודה</small>
+            </div>
+          </div>
+          <div class="float-card float-card--2" data-parallax="-0.02">
+            <div class="float-card__icon">⚡</div>
+            <div>
+              <b>התקנה מהירה</b>
+              <small>צוות מקצועי</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Бегущая строка -->
+      <div class="ticker reveal">
+        <div class="ticker__track">
+          <span>התקנת עמדות טעינה</span><i>⚡</i>
+          <span>חפירות ותשתיות</span><i>⚡</i>
+          <span>הרמת אבנים משתלבות</span><i>⚡</i>
+          <span>עבודות תקשורת</span><i>⚡</i>
+          <span>הדברה מקצועית</span><i>⚡</i>
+          <!-- дубликат для бесшовности -->
+          <span>התקנת עמדות טעינה</span><i>⚡</i>
+          <span>חפירות ותשתיות</span><i>⚡</i>
+          <span>הרמת אבנים משתלבות</span><i>⚡</i>
+          <span>עבודות תקשורת</span><i>⚡</i>
+          <span>הדברה מקצועית</span><i>⚡</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= УСЛУГИ ======================= -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="pill">השירותים שלנו</span>
+          <h2 class="section-title">כל הפתרונות <span class="accent-text">תחת קורת גג אחת</span></h2>
+          <p class="section-sub">צוות מיומן, ציוד מקצועי וליווי אישי לאורך כל הדרך.</p>
+        </div>
+
+        <div class="services-grid">
+
+          <!-- Услуга 1 — главная, большая карточка -->
+          <article class="service-card service-card--featured reveal">
+            <div class="img-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 16l4.5-4.5 3 3L16 10l4 4M4 6h16v12H4V6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              <img src="img/service-charging.jpg" alt="התקנת עמדת טעינה">
+            </div>
+            <div class="service-card__body">
+              <div class="service-card__icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L4.5 13.5H11L9.5 22L19 10H12.5L13 2Z" fill="currentColor"/></svg>
+              </div>
+              <h3>התקנת עמדות טעינה לרכב חשמלי</h3>
+              <p>התקנה מקצועית לעסקים וללקוחות פרטיים — סקירת שטח, עבודות תשתית וחיבור העמדה מכל סוג.</p>
+              <a href="#contact" class="service-card__link">לפרטים נוספים ←</a>
+            </div>
+          </article>
+
+          <!-- Услуга 2 -->
+          <article class="service-card reveal" data-delay="100">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M3 20h18M5 20V9l7-5 7 5v11M9 20v-6h6v6" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>הכנת תשתיות וחפירות</h3>
+            <p>חפירות לעומקים שונים, הכנת תשתיות לעמדות טעינה, סיבים אופטיים והנחת צנרת.</p>
+            <a href="#contact" class="service-card__link">לפרטים נוספים ←</a>
+          </article>
+
+          <!-- Услуга 3 -->
+          <article class="service-card reveal" data-delay="200">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M3 8h8v4H3V8zm10 0h8v4h-8V8zM3 12h8v4H3v-4zm10 0h8v4h-8v-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>הרמת אבנים משתלבות</h3>
+            <p>הרמה והחזרה מדויקת של אבנים משתלבות לצורכי תשתית ושיפוץ.</p>
+            <a href="#contact" class="service-card__link">לפרטים נוספים ←</a>
+          </article>
+
+          <!-- Услуга 4 -->
+          <article class="service-card reveal" data-delay="100">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12a7 7 0 0 1 14 0M8 12a4 4 0 0 1 8 0M12 12v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </div>
+            <h3>עבודות תקשורת</h3>
+            <p>תשתיות תקשורת וסיבים אופטיים עם ציוד מקצועי וצוות מוסמך.</p>
+            <a href="#contact" class="service-card__link">לפרטים נוספים ←</a>
+          </article>
+
+          <!-- Услуга 5 -->
+          <article class="service-card reveal" data-delay="200">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 8a4 4 0 0 1 4 4v3a4 4 0 0 1-8 0v-3a4 4 0 0 1 4-4zm0 0V5m-6 5l3 1m9-1l-3 1M6 17l3-1m9 1l-3-1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>הדברה מקצועית</h3>
+            <p>שירותי הדברה אמינים ובטוחים לבית ולעסק, עם אחריות מלאה.</p>
+            <a href="#contact" class="service-card__link">לפרטים נוספים ←</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= ПОЧЕМУ МЫ ======================= -->
+    <section class="section section--mint">
+      <div class="container why-grid">
+        <div class="why__media reveal">
+          <div class="img-placeholder img-placeholder--tall">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 16l4.5-4.5 3 3L16 10l4 4M4 6h16v12H4V6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            <img src="img/team.jpg" alt="הצוות שלנו בשטח">
+          </div>
+        </div>
+
+        <div class="why__content">
+          <span class="pill reveal">למה אנחנו?</span>
+          <h2 class="section-title reveal" data-delay="100">עבודה איכותית,<br><span class="accent-text">במחיר הטוב ביותר</span></h2>
+
+          <ul class="why-list">
+            <li class="reveal" data-delay="150">
+              <span class="why-list__icon">✓</span>
+              <div><b>צוות מקצועי ומיומן</b><small>ניסיון של שנים בפרויקטים גדולים וקטנים</small></div>
+            </li>
+            <li class="reveal" data-delay="250">
+              <span class="why-list__icon">✓</span>
+              <div><b>ליווי מלא מהתחלה ועד הסוף</b><small>סקירת שטח, תכנון, ביצוע ואחריות</small></div>
+            </li>
+            <li class="reveal" data-delay="350">
+              <span class="why-list__icon">✓</span>
+              <div><b>מחיר הוגן ושקוף</b><small>הצעת מחיר ברורה לפני תחילת העבודה</small></div>
+            </li>
+          </ul>
+
+          <a href="#contact" class="btn btn--primary reveal" data-delay="450">דברו איתנו</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция НАШИ РАБОТЫ -->
+    <section class="section" id="works">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="pill">העבודות שלנו</span>
+          <h2 class="section-title">פרויקטים <span class="accent-text">מהשטח</span></h2>
+          <p class="section-sub">כמה דוגמאות לעבודות שביצענו עבור לקוחותינו.</p>
+        </div>
+
+        <!-- Автоматическая галерея из Telegram -->
+        <div class="gallery" id="telegramGallery">
+          <div class="gallery__loading">Загрузка работ из Telegram...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= CTA-ПОЛОСА ======================= -->
+    <section class="cta-strip">
+      <div class="container cta-strip__inner reveal">
+        <h2>מוכנים להתחיל?</h2>
+        <p>השאירו פרטים ונחזור אליכם עם הצעת מחיר משתלמת</p>
+        <a href="#contact" class="btn btn--white">קבלו הצעה עכשיו</a>
+      </div>
+    </section>
+
+    <!-- ======================= КОНТАКТЫ ======================= -->
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+
+        <!-- CTA вместо формы: телефон + WhatsApp -->
+        <div class="contact-cta reveal">
+          <div class="contact-cta__card">
+            <span class="pill">צור קשר</span>
+            <h2 class="section-title">דברו איתנו <span class="accent-text">עכשיו</span></h2>
+            <p class="contact-cta__text">חייגו אלינו או שלחו וואטסאפ — נחזור אליכם בהקדם!</p>
+
+            <a href="tel:+972534922222" class="contact-phone">
+              <span class="contact-phone__icon">📞</span>
+              <span class="contact-phone__num" dir="ltr">053-492-2222</span>
+            </a>
+
+            <a href="https://api.whatsapp.com/send?phone=972534922222&text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9B%D7%9D%20%D7%95%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%2F%D7%AA%20%D7%91%D7%94%D7%AA%D7%A7%D7%A0%D7%AA%20%D7%A2%D7%9E%D7%93%D7%AA%20%D7%98%D7%A2%D7%99%D7%A0%D7%94"
+               target="_blank" rel="noopener" class="btn btn--whatsapp btn--block">
+              <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+                <path d="M16 3C9.4 3 4 8.4 4 15c0 2.6.8 5 2.2 7L4 29l7.2-2.1c1.9 1 3.9 1.6 4.8 1.6 6.6 0 12-5.4 12-12S22.6 3 16 3zm6.1 16.9c-.3.8-1.5 1.5-2.1 1.6-.6.1-1.3.1-2.1-.1-.5-.2-1.1-.4-1.9-.7-3.4-1.4-5.5-4.8-5.7-5-.2-.2-1.4-1.8-1.4-3.4 0-1.6.9-2.4 1.2-2.7.3-.3.6-.4.8-.4h.6c.2 0 .5-.1.7.5l1 2.4c.1.2.1.4 0 .6l-.4.6-.6.7c-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.7.3.2.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2.3 1.1c.3.2.5.2.6.4.1.2.1.8-.2 1.4z"/>
+              </svg>
+              שלחו לנו וואטסאפ
+            </a>
+          </div>
+        </div>
+
+        <!-- Контактная информация -->
+        <aside class="contact-info reveal" data-delay="150">
+          <div class="contact-info__card">
+            <h3>פרטי התקשרות</h3>
+
+            <a href="tel:+972534922222" class="contact-info__row">
+              <span class="contact-info__icon">📞</span>
+              <div><b>טלפון</b><small dir="ltr">053-492-2222</small></div>
+            </a>
+
+            <a href="https://api.whatsapp.com/send?phone=972534922222" target="_blank" rel="noopener" class="contact-info__row">
+              <span class="contact-info__icon">💬</span>
+              <div><b>וואטסאפ</b><small>שלחו לנו הודעה</small></div>
+            </a>
+
+            <a href="https://www.instagram.com/perfecto.group.israel/" target="_blank" rel="noopener" class="contact-info__row">
+              <span class="contact-info__icon">📷</span>
+              <div><b>אינסטגרם</b><small dir="ltr">perfecto.group.israel</small></div>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=100090144655375" target="_blank" rel="noopener" class="contact-info__row">
+              <span class="contact-info__icon">👍</span>
+              <div><b>פייסבוק</b><small>עקבו אחרינו</small></div>
+            </a>
+          </div>
+        </aside>
+
+        <!-- Блок соцсетей (на всю ширину секции) -->
+        <div class="socials reveal">
+          <h3 class="socials__title">עקבו אחרינו ברשתות</h3>
+          <p class="socials__sub">פרויקטים חדשים, עדכונים וטיפים — ישירות בפיד שלכם</p>
+
+          <div class="socials__list">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/profile.php?id=100090144655375"
+               target="_blank" rel="noopener"
+               class="social-btn"
+               aria-label="Facebook">
+              <img src="img/facebook.png" alt="Facebook">
+            </a>
+
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@perfecto_group"
+               target="_blank" rel="noopener"
+               class="social-btn"
+               aria-label="TikTok">
+              <img src="img/tiktok.png" alt="TikTok">
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/perfecto.group.israel/"
+               target="_blank" rel="noopener"
+               class="social-btn"
+               aria-label="Instagram">
+              <img src="img/instagram.png" alt="Instagram">
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= ФУТЕР ======================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <div class="navbar__brand">
+          <div class="navbar__logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+          </div>
+          <div class="navbar__name">Perfecto <b>Group</b></div>
+        </div>
+      </div>
+      <div class="footer__copy">
+        © <span id="year"></span> Perfecto Group. כל הזכויות שמורות.
+      </div>
+    </div>
+    
+    <div class="footer__company-info">
+      <h3 class="footer__company-title">פרטי החברה</h3>
+      <div class="footer__company-details">
+        <p><strong>ROMAN PERFECTO GROUP LTD</strong></p>
+        <p><strong>רומן פרפקטו גרופ בע"מ</strong></p>
+        <div class="footer__company-grid">
+          <div class="footer__company-item">
+            <span class="footer__company-label">מספר חברה:</span>
+            <span class="footer__company-value">516984564</span>
+          </div>
+          <div class="footer__company-item">
+            <span class="footer__company-label">סוג חברה:</span>
+            <span class="footer__company-value">Private Limited Company</span>
+          </div>
+          <div class="footer__company-item">
+            <span class="footer__company-label">סטטוס:</span>
+            <span class="footer__company-value">Active | פעילה</span>
+          </div>
+          <div class="footer__company-item">
+            <span class="footer__company-label">תאריך הקמה:</span>
+            <span class="footer__company-value">2024-05-20</span>
+          </div>
+          <div class="footer__company-item">
+            <span class="footer__company-label">שם באנגלית:</span>
+            <span class="footer__company-value">ROMAN PERFECTO GROUP LTD</span>
+          </div>
+          <div class="footer__company-item">
+            <span class="footer__company-label">שם בעברית:</span>
+            <span class="footer__company-value">רומן פרפקטו גרופ בע"מ</span>
+          </div>
+          <div class="footer__company-item">
+            <span class="footer__company-label">עיר:</span>
+            <span class="footer__company-value">Tel Aviv | תל אביב - יפו</span>
+          </div>
+          <div class="footer__company-item">
+            <span class="footer__company-label">כתובת:</span>
+            <span class="footer__company-value">שץ גגה גרשון</span>
+          </div>
+          <div class="footer__company-item">
+            <span class="footer__company-label">מיקוד:</span>
+            <span class="footer__company-value">6701738</span>
+          </div>
+          <div class="footer__company-item">
+            <span class="footer__company-label">דו"ח שנתי אחרון:</span>
+            <span class="footer__company-value">2026</span>
+          </div>
+        </div>
+      </div>
+      <a href="https://www.kycisrael.com/companies/516984564/roman-perfecto-group-ltd/" target="_blank" rel="noopener noreferrer" class="footer__verify-link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        אימות רשמי - KYC Israel
+      </a>
+    </div>
+  </div>
+</footer>
+
+  <!-- Плавающая кнопка WhatsApp -->
+  <a href="https://api.whatsapp.com/send?phone=972534922222" target="_blank" rel="noopener" class="whatsapp-float" aria-label="וואטסאפ">
+    <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+      <path d="M16 3C9.4 3 4 8.4 4 15c0 2.6.8 5 2.2 7L4 29l7.2-2.1c1.9 1 3.9 1.6 4.8 1.6 6.6 0 12-5.4 12-12S22.6 3 16 3zm6.1 16.9c-.3.8-1.5 1.5-2.1 1.6-.6.1-1.3.1-2.1-.1-.5-.2-1.1-.4-1.9-.7-3.4-1.4-5.5-4.8-5.7-5-.2-.2-1.4-1.8-1.4-3.4 0-1.6.9-2.4 1.2-2.7.3-.3.6-.4.8-.4h.6c.2 0 .5-.1.7.5l1 2.4c.1.2.1.4 0 .6l-.4.6-.6.7c-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.7.3.2.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2.3 1.1c.3.2.5.2.6.4.1.2.1.8-.2 1.4z"/>
+    </svg>
+  </a>
+
+  <script src="animations.js"></script>
+</body>
+</html>
