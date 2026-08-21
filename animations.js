@@ -174,52 +174,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------- Автозагрузка галереи из Telegram ---------- */
-  document.addEventListener('DOMContentLoaded', () => {
-    const galleryContainer = document.getElementById('telegramGallery');
-    if (!galleryContainer) return;
+  /* ---------- Галерея фото из GitHub ---------- */
+  const galleryContainer = document.getElementById('telegramGallery');
 
-    const channelName = 'perfectogroupworks';
-    // Используем кодирование через jsproxy / codetabs вместо тупящего allorigins
-    const targetUrl = `https://t.me/s/${channelName}`;
-    const proxyUrl = `https://api.codetabs.com/v1/proxy?quest=${targetUrl}`;
+  if (galleryContainer) {
+    galleryContainer.innerHTML = ''; // Очищаем надпись "Загрузка..."
 
-    fetch(proxyUrl)
-      .then((res) => res.text())
-      .then((htmlText) => {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(htmlText, 'text/html');
-        
-        // Находим картинки постов
-        const photoElements = doc.querySelectorAll('.tgme_widget_message_photo_wrap');
+    const totalImages = 5; // Количество фото
+    const baseUrl = 'https://kayoosh2009.github.io/Perfecto-Group-Israel/images/';
 
-        if (!photoElements.length) {
-          galleryContainer.innerHTML = '<p style="text-align:center; width:100%;">В канале пока нет опубликованных фото.</p>';
-          return;
-        }
+    for (let i = 1; i <= totalImages; i++) {
+      // Преобразуем 1 -> '001', 2 -> '002' и т.д.
+      const num = String(i).padStart(3, '0');
+      const imgUrl = `${baseUrl}${num}.jpg`;
 
-        galleryContainer.innerHTML = '';
+      const item = document.createElement('div');
+      item.className = 'gallery__item img-placeholder reveal visible';
+      item.innerHTML = `<img src="${imgUrl}" alt="Работа Perfecto Group №${num}" loading="lazy">`;
 
-        // Берем последние 6 фото
-        Array.from(photoElements).slice(-6).reverse().forEach((el) => {
-          const style = el.getAttribute('style');
-          const match = style ? style.match(/url\(['"]?(.*?)['"]?\)/) : null;
-
-          if (match && match[1]) {
-            const imgUrl = match[1];
-            const item = document.createElement('div');
-            item.className = 'gallery__item img-placeholder reveal visible';
-            item.innerHTML = `<img src="${imgUrl}" alt="Perfecto Group Work" loading="lazy">`;
-            galleryContainer.appendChild(item);
-          }
-        });
-      })
-      .catch((err) => {
-        console.error(err);
-        galleryContainer.innerHTML = '<p style="text-align:center; width:100%;">Зайдите в наш <a href="https://t.me/perfectogroupworks" target="_blank" style="color:var(--green)">Telegram-канал</a>, чтобы посмотреть работы.</p>';
-      });
-  });
-
+      galleryContainer.appendChild(item);
+    }
+  }
+  
   /* ---------- 7. Текущий год в футере ---------- */
   const year = document.getElementById('year');
 
