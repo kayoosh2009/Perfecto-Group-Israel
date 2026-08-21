@@ -174,28 +174,54 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------- Галерея фото из GitHub ---------- */
+  /* ---------- Галерея фото из GitHub с полноэкранным просмотром ---------- */
   const galleryContainer = document.getElementById('telegramGallery');
 
   if (galleryContainer) {
-    galleryContainer.innerHTML = ''; // Очищаем надпись "Загрузка..."
+    galleryContainer.innerHTML = ''; // Очищаем контейнер
 
-    const totalImages = 5; // Количество фото
+    const totalImages = 9; // Теперь 9 фото (от 001.jpg до 009.jpg)
     const baseUrl = 'https://kayoosh2009.github.io/Perfecto-Group-Israel/images/';
 
+    // Создаём модальное окно для полноэкранного просмотра
+    const modal = document.createElement('div');
+    modal.className = 'lightbox-modal';
+    modal.innerHTML = `
+      <span class="lightbox-close">&times;</span>
+      <img class="lightbox-img" src="" alt="Увеличенное фото">
+    `;
+    document.body.appendChild(modal);
+
+    const modalImg = modal.querySelector('.lightbox-img');
+    const closeBtn = modal.querySelector('.lightbox-close');
+
+    // Функция закрытия модального окна
+    const closeModal = () => modal.classList.remove('active');
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // Генерация элементов галереи
     for (let i = 1; i <= totalImages; i++) {
-      // Преобразуем 1 -> '001', 2 -> '002' и т.д.
       const num = String(i).padStart(3, '0');
       const imgUrl = `${baseUrl}${num}.jpg`;
 
       const item = document.createElement('div');
       item.className = 'gallery__item img-placeholder reveal visible';
+      item.style.cursor = 'pointer'; // Указатель кликабельности
       item.innerHTML = `<img src="${imgUrl}" alt="Работа Perfecto Group №${num}" loading="lazy">`;
+
+      // Открытие фото при клике
+      item.addEventListener('click', () => {
+        modalImg.src = imgUrl;
+        modal.classList.add('active');
+      });
 
       galleryContainer.appendChild(item);
     }
   }
-  
+
   /* ---------- 7. Текущий год в футере ---------- */
   const year = document.getElementById('year');
 
